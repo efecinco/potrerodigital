@@ -1,5 +1,6 @@
 
 
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -46,7 +47,7 @@ h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: linear-gradient(45deg, #318133, #318133);
+  background: linear-gradient(45deg, #318133, #AAAAAA);
   color: #fff;
   padding: 2px 20px 8px 20px;
   font-size: 16px;
@@ -57,7 +58,7 @@ h6 {
 }
 
 .back-to-top:focus {
-  background: linear-gradient(45deg, #318133, #318133);
+  background: linear-gradient(45deg, #318133, #AAAAAA);
   color: #fff;
   outline: none;
 }
@@ -70,16 +71,47 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-
 #header {
-  padding: 30px 0;
-  height: 92px;
- position: fixed;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+}
+
+#header video {
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#header .container {
+  position: relative;
+  z-index: 2;
+}
+
+#header .overlay {
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background: linear-gradient(45deg, rgba(49, 129, 51, 0.6), rgba(115, 162, 213, 0.6)) center top no-repeat;  
 }
 
 #header #logo {
@@ -92,7 +124,7 @@ h6 {
   padding: 0;
   line-height: 1;
   display: inline-block;
-  font-family: "Minercraftory", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -111,9 +143,25 @@ h6 {
 #header.header-fixed {
   background: #fff;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
+  padding: 15px 0;
   height: 72px;
   transition: all 0.5s;
+}
+
+#menuheader {
+    position: fixed;
+    float: left;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e2e2;
+	transition: all 0.5s;
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    font-weight: 200;
 }
 
 /*--------------------------------------------------------------
@@ -122,8 +170,7 @@ h6 {
 
 #intro {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(45deg, rgba(49, 129, 51, 0.8), rgba(49, 129, 51, 0.8)), url("../img/intro-bg.jpg") center top no-repeat;
+/*- background: linear-gradient(45deg, rgba(49, 129, 51, 0.6), rgba(115, 162, 213, 0.6)), url("../img/intro-bg.jpg") center top no-repeat;-*/
   background-size: cover;
   position: relative;
 }
@@ -137,7 +184,7 @@ h6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -301,12 +348,12 @@ h6 {
 /* Nav Meu Styling */
 
 .nav-menu a {
-  padding: 0 8px 10px 8px;
+  padding: 8px 8px 8px 8px;
   display: inline-block;
   color: #000000;
-  font-family: "Minercraftory", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   outline: none;
 } 
 
@@ -477,7 +524,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 60px;
   height: 3px;
   background: #318133;
-  background: linear-gradient(0deg, #318133 0%, #318133 100%);
+  background: linear-gradient(0deg, #318133 0%, #AAAAAA 100%);
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -487,6 +534,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .section-bg {
   background: #eff5f5;
+}
+
+.section-bgb {
+  background: #fff;
 }
 
 /* Product Featuress Section
@@ -666,7 +717,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #call-to-action {
   overflow: hidden;
-  background: linear-gradient(rgba(49, 129, 51, 0.8), rgba(49, 129, 51, 0.8)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(45deg, rgba(49, 129, 51, 0.6), rgba(115, 162, 213, 0.6)), url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
@@ -705,7 +756,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #call-to-action2 {
   overflow: hidden;
-  background: linear-gradient(rgba(49, 129, 51, 0.8), rgba(49, 129, 51, 0.8)), url(../img/call-to-action2-bg.jpg) fixed center center;
+  background: linear-gradient(45deg, rgba(115, 162, 213, 0.6), rgba(49, 129, 51, 0.6)), url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
@@ -766,8 +817,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features .icon i:before {
-  background: #318133;
-  background: linear-gradient(45deg, #318133 0%, #AAAAA 100%);
+  background: linear-gradient(30deg, rgba(115, 162, 213, 0.9), rgba(49, 129, 51, 1));
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -811,80 +861,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   opacity: 1;
 }
 
-/* Pricing Section
---------------------------------*/
-
-#pricing {
-  padding: 60px 0 60px 0;
-  overflow: hidden;
-}
-
-#pricing .box {
-  padding: 40px;
-  margin-bottom: 30px;
-  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
-  background: #fff;
-  text-align: center;
-}
-
-#pricing h3 {
-  font-weight: 400;
-  margin-bottom: 15px;
-  font-size: 28px;
-}
-
-#pricing h4 {
-  font-size: 46px;
-  color: #318133;
-  font-weight: 300;
-}
-
-#pricing h4 sup {
-  font-size: 20px;
-  top: -20px;
-}
-
-#pricing h4 span {
-  color: #bababa;
-  font-size: 20px;
-}
-
-#pricing ul {
-  padding: 0;
-  list-style: none;
-  color: #999;
-  text-align: left;
-  line-height: 20px;
-}
-
-#pricing ul li {
-  padding-bottom: 12px;
-}
-
-#pricing ul i {
-  color: #318133;
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-#pricing .get-started-btn {
-  background: #515e61;
-  display: inline-block;
-  padding: 6px 30px;
-  border-radius: 20px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-}
-
-#pricing .featured {
-  border: 2px solid #318133;
-}
-
-#pricing .featured .get-started-btn {
-  background: linear-gradient(45deg, #318133, #318133);
 }
 /* RESULTADOS
 \*------------------------------------*/
@@ -954,7 +930,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #gallery .get-started-btn {
-  background: #318133;
+  background: linear-gradient(45deg, #318133, #AAAAAA);
   display: inline-block;
   padding: 6px 30px;
   border-radius: 20px;
@@ -1080,7 +1056,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"] {
-  background: linear-gradient(45deg, #318133, #318133);
+  background: linear-gradient(45deg, #318133, #AAAAAA);
   border: 0;
   border-radius: 20px;
   padding: 8px 30px;
@@ -1161,6 +1137,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (min-width: 1025px) {
   #intro {
     background-attachment: fixed;
+  }
+}
+
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
   }
 }
 
