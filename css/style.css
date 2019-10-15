@@ -162,14 +162,17 @@ h6 {
     padding: 15px 0;
     font-weight: 200;
 }
-
+#video-overlay{
+	width:100%;
+	 position: relative;
+}
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
 
 #intro {
   width: 100%;
-/*- background: linear-gradient(45deg, rgba(49, 129, 51, 0.6), rgba(115, 162, 213, 0.6)), url("../img/intro-bg.jpg") center top no-repeat;-*/
+  background: linear-gradient(45deg, rgba(49, 129, 51, 0.6), rgba(115, 162, 213, 0.6)), url("../img/intro-bg.jpg") center top no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -407,7 +410,7 @@ h6 {
 }
 
 #mobile-nav-toggle i {
-  color: #fff;
+  color: #000000;
 }
 
 /* Mobile Nav Styling */
@@ -1137,19 +1140,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   #intro {
     background-attachment: fixed;
   }
+
 }
 
 
 @media (pointer: coarse) and (hover: none) {
-  header {
+  #header {
 	background: linear-gradient(45deg, rgba(49, 129, 51, 0.6), rgba(115, 162, 213, 0.6)), url("../img/intro-bg.jpg") center top no-repeat;
   }
-  header video {
+  
+  #header video {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
+	#video-overlay{
+		height:22rem;
+		margin-bottom:-8rem;
+	}
+	#intro .intro-text  {
+   top:10rem;
+  }
   #header #logo h1 {
     font-size: 28px;
     margin-top: 0;
@@ -1160,12 +1172,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #intro h2 {
-    font-size: 28px;
+	  margin:0;
+
+    font-size: 25px;
     line-height: 36px;
   }
 
   #intro p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 24px;
     margin-bottom: 20px;
   }
@@ -1191,9 +1205,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   #advanced-features .advanced-feature-img-left {
     max-width: 50%;
   }
+
+
 }
 
 @media (max-width: 767px) {
+
   #intro .product-screens .product-screen-1 {
     position: static;
     padding-top: 30px;
@@ -1220,7 +1237,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center;
     padding-bottom: 15px;
   }
-
+  #nav-menu-container {
+    display: none;
+  }
   #more-features h4,
   #more-features p {
     margin-left: 0;
